@@ -27,8 +27,8 @@ class BestBuyTest extends TestCase
         // it should return the appropriate StockStatus
         try {
             $StockStatus = (new BestBuy())->checkAvailability($stock);
-        } catch (\Exception $exception) {
-            $this->fail('failed bestBuy API');
+        } catch (\Exception $e) {
+            $this->fail('failed bestBuy API' . $e->getMessage());
         }
 
         $this->assertTrue(true);
