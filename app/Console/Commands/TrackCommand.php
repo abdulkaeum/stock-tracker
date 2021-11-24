@@ -40,5 +40,7 @@ class TrackCommand extends Command
     {
         // for each product call track on product
         Product::all()->each->track();
+
+        $this->info('Tracking complete');
     }
 }
