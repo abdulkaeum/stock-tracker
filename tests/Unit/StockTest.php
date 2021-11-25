@@ -42,10 +42,10 @@ class StockTest extends TestCase
         // return ['available' => true, 'price' => 9900]
         ClientFactory::shouldReceive('make')->andReturn(new FakeClient);
 
-        $stock = tap(Stock::first()->track());
+        $stock = tap(Stock::first())->track();
 
         $this->assertTrue($stock->in_stock);
-        $this->assertEquals(9900, $stock->price);
+        $this->assertEquals(339900, $stock->price);
 
     }
 }

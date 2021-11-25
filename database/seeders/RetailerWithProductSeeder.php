@@ -23,10 +23,10 @@ class RetailerWithProductSeeder extends Seeder
 
         // create the supply for the product at the retailer
         $stock = new Stock([
-            'price' => 1000,
-            'url' => 'http://foo.com',
-            'sku' => 12345,
-            'in_stock' => false
+            'price' => 339900,
+            'url' => 'https://www.bestbuy.com/site/nintendo-switch-32gb-console-gray-joy-con/6364253.p?skuId=6364253&intl=nosplash',
+            'sku' => 6364253,
+            'in_stock' => true
         ]);
 
         $bestBuy->addStock($switch, $stock);

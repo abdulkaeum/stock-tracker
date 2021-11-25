@@ -12,14 +12,17 @@ class BestBuyTest extends TestCase
 {
     use RefreshDatabase;
     /** @test */
-    function it_tracks_a¬_product()
+    function it_tracks_a_product()
     {
         // given we have a product
         $this->seed(RetailerWithProductSeeder::class);
 
         // with stock at BestBuy
         $stock = tap(Stock::first())->update([
-            'sku' => 6364253
+            'price' => 339900,
+            'url' => 'https://www.bestbuy.com/site/nintendo-switch-32gb-console-gray-joy-con/6364253.p?skuId=6364253&intl=nosplash',
+            'sku' => 6364253,
+            'in_stock' => true
         ]);
 
 
