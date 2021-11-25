@@ -24,6 +24,22 @@ class Product extends Model
     public function track()
     {
         // for each product call track on stock
-        $this->stock->each->track();
+        $this->stock->each->track(
+            fn($stock) => $this->recordHistory($stock)
+        );
+    }
+
+    public function recordHistory(Stock $stock)
+    {
+        $this->history()->create([
+            'in_stock' => $stock->in_stock,
+            'price' => $stock->price,
+            'stock_id' => $stock->id
+        ]);
+    }
+
+    public function history()
+    {
+        return $this->hasMany(History::class);
     }
 }
