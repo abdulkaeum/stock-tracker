@@ -31,7 +31,7 @@ class ProductHistoryTest extends TestCase
         $this->assertCount(1, $product->refresh()->history);
 
         $history = History::first();
-        $stock = $product->stoc k[0];
+        $stock = $product->stock[0];
 
         $this->assertEquals($stock->price, $history->price);
         $this->assertEquals($stock->in_stock, $history->in_stock);
