@@ -1,4 +1,4 @@
-A Stock Tracking app
+# A Stock Tracking app
 
 -check stock updates via Artisan command
 -check stock availability from API for a product
