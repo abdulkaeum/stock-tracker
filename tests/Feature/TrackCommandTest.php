@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Clients\StockStatus;
+use App\Models\Stock;
 use App\Models\User;
 use App\Notifications\ImportantStockUpdate;
 use Facades\App\Clients\ClientFactory;
