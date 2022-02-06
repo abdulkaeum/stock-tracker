@@ -8,7 +8,8 @@ A backend app that uses an artisan command to track and record stock history fro
 - Checks the status of stock updates via an artisan command
 - Checks stock availability from multiple retailers for each product
 - Updates stock availability
-- Notify the user if product is available
+- Notify the user if a product is available 
+    - using an event / listener and mail notification
 - Records stock history
 - Uses the HTTP client from Laravel 7
 
